@@ -7,7 +7,7 @@ function preload() {
 
 function setup() {
   createCanvas(500, 500);
-  so.play();
+
 }
 
 function draw() {
@@ -23,4 +23,8 @@ function mouseReleased() {
     so.loop();
   }
 
+}
+// add these to programs that use sound, at the bottom
+function touchStarted() {
+  getAudioContext().resume();
 }
