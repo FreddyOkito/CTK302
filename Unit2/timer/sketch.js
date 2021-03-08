@@ -1,41 +1,60 @@
-let state = 0 ;
+let state = 0;
+let timer = 0;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(800, 800);
+  ellipseMode(CENTER);
+  rectMode(CENTER);
 }
 
 function draw() {
+  background(100);
+  fill('yellow')
+  rect(width / 2, height / 2, 200, 700);
+
+  // car
+  fill('blue');
+  rect(x, 750, 75, 20)
+  x = x + velocity;
+  if (x > width) {
+    x = 0;
+  }
   switch (state)
 
-  case 0:
-  background (100)
-  text ("state " , 100, 100);
+  case 0: //red
+    text("0", 100, 100);
+  fill('red');
+  ellipse(width / 2, height / 2 - 170, 150, 150);
+  fill('grey');
+  ellipse(width / 2, height / 2, 150, 150);
+  ellipse(width / 2, height / 2 + 170, 150, 150);
   break;
 
-  case 1:
-  background ('red')
-  text ("state 1 " , 100, 100);
+  case 1: // green
+    text("1 ", 100, 100);
+  fill('grey');
+  ellipse(width / 2, height / 2 - 170, 150, 150);
+  ellipse(width / 2, height / 2, 150, 150);
+  fill('green');
+  ellipse(width / 2, height / 2 + 170, 150, 150);
   break;
 
-  case 2:
-  background ('blue')
-  text ("state 2 " , 100, 100);
+  case 2: // yellow
+    text("2", 100, 100);
+  fill('grey');
+  ellipse(width / 2, height / 2 - 170, 150, 150);
+  fill('yellow');
+  ellipse(width / 2, height / 2, 150, 150);
+  fill('grey');
+  ellipse(width / 2, height / 2 + 170, 150, 150);
   break;
 
-  case 3:
-  background ('yellow')
-  text ("state " , 100, 100);
-  break;
-
-  case 4:
-  background ('green')
-  text ("state " , 100, 100);
-  break;
-
-
- }
 }
 
+
+
+
 function mouseReleased() {
-  state = state + 1;
+  state++
+  if (state > 2) state = 0;
 }
