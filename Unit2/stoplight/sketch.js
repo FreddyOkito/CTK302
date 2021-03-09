@@ -32,6 +32,7 @@ function draw() {
       fill('grey');
       ellipse(width / 2, height / 2, 150, 150);
       ellipse(width / 2, height / 2 + 170, 150, 150);
+      velocity = 0;
       break;
 
     case 1: // green
@@ -41,7 +42,9 @@ function draw() {
       ellipse(width / 2, height / 2, 150, 150);
       fill('green');
       ellipse(width / 2, height / 2 + 170, 150, 150);
+      velocity = 5;
       break;
+
 
     case 2: // yellow
       text("2", 100, 100);
@@ -51,6 +54,7 @@ function draw() {
       ellipse(width / 2, height / 2, 150, 150);
       fill('grey');
       ellipse(width / 2, height / 2 + 170, 150, 150);
+      velocity = 3
       break;
   }
 
