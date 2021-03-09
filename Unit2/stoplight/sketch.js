@@ -14,12 +14,12 @@ function draw() {
 
   // car
   fill('blue');
-  rect(x, 750, 75, 20)
+  rect(x, 750, 75, 20);
   x = x + velocity;
   if (x > width) {
     x = 0;
   }
-  switch (state)
+  switch (state);
 
   case 0: // red
     text("0", 100, 100);
