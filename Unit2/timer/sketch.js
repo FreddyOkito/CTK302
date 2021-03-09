@@ -21,7 +21,7 @@ function draw() {
   }
   switch (state)
 
-  case 0: //red
+  case 0: // red
     text("0", 100, 100);
   fill('red');
   ellipse(width / 2, height / 2 - 170, 150, 150);
