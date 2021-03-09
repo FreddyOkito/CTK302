@@ -9,7 +9,7 @@ function setup() {
 
 function draw() {
   background(100);
-  fill('yellow')
+  fill('yellow');
   rect(width / 2, height / 2, 200, 700);
 
   // car
@@ -49,6 +49,12 @@ function draw() {
   ellipse(width / 2, height / 2 + 170, 150, 150);
   break;
 
+}
+
+timer = timer + 1;
+if(timer > 100) {
+  timer = 0;
+  if (state > 2) state = 0;
 }
 
 
