@@ -1,7 +1,7 @@
 let state = 0;
 let timer = 0;
 let x = 0;
-let velocity = 5;
+let velocity = 0;
 
 function setup() {
   createCanvas(800, 800);
