@@ -6,7 +6,7 @@ function preload(){
 
     locationData =  getCurrentPosition();
 }
-
+//hello
 function setup(){
 	num = 0 ;
     intervalCurrentPosition(positionPing, 5000) ;
